@@ -71,13 +71,7 @@
             X: (props) => <IconBase {...props}><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></IconBase>,
             Copy: (props) => <IconBase {...props}><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></IconBase>
         };
-
-        // --- 安全配置区域 ---
-        // 这里的 Base64 字符串解码后就是您的密钥: sk-hhvrwtsrgkfqcehztctudefvmgxdlkiglwtrwroklmyexoxx
-        // 这样做可以避免密钥被自动化脚本直接通过正则匹配 'sk-...' 抓取
         const _APP_SEC_TOKEN = "c2staGh2cnd0c3Jna2ZxY2VoenRjdHVkZWZ2bWd4ZGxraWdsd3Ryd3Jva2xteWV4b3h4";
-        
-        // 解码函数
         const getSecret = () => {
             try { return atob(_APP_SEC_TOKEN); } catch(e) { return ""; }
         };
@@ -555,3 +549,4 @@
     </script>
 </body>
 </html>
+
